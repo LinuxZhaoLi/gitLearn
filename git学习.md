@@ -1,4 +1,4 @@
-svn和git的区别：
+## svn和git的区别：
 
 svn:是增量式的管理方式。 版本控制在服务器， 服务器宕机。历史版本数据丢失。 
 
@@ -14,7 +14,7 @@ git: .GIT是分布式的. 本地有版本管理， 避免单点故障。
 
 
 
-代码托管中心：
+## 代码托管中心：
 
 局域网： gitLab
 
@@ -30,7 +30,7 @@ git: .GIT是分布式的. 本地有版本管理， 避免单点故障。
 
 克隆远程库：fork  
 
-团队外：
+## 团队外：
 
 ![Snipaste_2022-01-09_19-52-15](E:\github\gitLearn\Image\Snipaste_2022-01-09_19-52-15.png)
 
@@ -38,7 +38,7 @@ git: .GIT是分布式的. 本地有版本管理， 避免单点故障。
 
 ![Snipaste_2022-01-09_20-00-16](E:\github\gitLearn\Image\Snipaste_2022-01-09_20-00-16.png)
 
-设置签名命令： 
+## 设置签名命令： 
 
 1. 项目级别/仓库级别 保存地址： .git/config  
 
@@ -57,7 +57,7 @@ git: .GIT是分布式的. 本地有版本管理， 避免单点故障。
 
    ![Snipaste_2022-01-09_20-12-05](E:\github\gitLearn\Image\Snipaste_2022-01-09_20-12-05.png)
 
-   git status:
+   ## git status:
 
     on branch master :  在master 分支
 
@@ -96,3 +96,93 @@ Changes not staged for commit:  未提交的更改:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 没有添加到提交的更改(使用“git add”和/或“git commit -a”)  
+
+## P15 版本的前进和后退：
+
+git log   完整 查看日志：
+
+git log --pretty=oneline  
+
+git log online   
+
+git reflog  移动到版本需要多少步。 
+
+```
+7259f27 (HEAD -> master) HEAD@{0}: commit: modify git
+1f32f2f HEAD@{1}: commit (initial): add git.md
+```
+
+
+
+## P17: 前进和后退
+
+git reset --hard  后退。   git reset --hard 1f32f2f 
+
+## P18: 其他方式切换版本
+
+^ 后退一个版本，n个回退n步。 
+
+~3 后退3个版本
+
+## P19: hard和soft 以及mixed参数
+
+soft 移动本地库。  本地不会变。 
+
+mixed:    移动本地库和暂存区。 
+
+hard移动本地库， 暂存区， 工作区。
+
+## P20 删除文件找回
+
+提交后的记录是不可磨灭的。 
+
+git reset --hard 5647ff
+
+## p21 添加到暂存区的文件删除找回
+
+rm applet.txt
+
+git add apple.txt 添加到暂存区
+
+git reset --hard 5647ff
+
+## P22  删除文件小结
+
+前提： 删除前文件提交到本地库
+
+## P23 比较文件
+
+git diff 文件名   工作区和暂存区进行比较
+
+git diff hard   工作区和本地库进行对比
+
+## p24 分支概述
+
+不想影响主干。 
+
+分支独立。 
+
+删除分支，不影响其他业务。 
+
+主干合并。 
+
+![Snipaste_2022-01-09_21-48-30](E:\github\gitLearn\Image\Snipaste_2022-01-09_21-48-30.png)
+
+分支的好处：
+
+同时推行多个功能开发， 提高开发效率。 
+
+删除分支，不影响主干。 
+
+## P25 分支操作
+
+git status 
+
+git branch -v   查看所有分支
+
+git branch hot_fix 创建分支
+
+git checkout hot_fix 切换分支
+
+
+
