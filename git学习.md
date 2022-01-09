@@ -184,5 +184,10 @@ git branch hot_fix 创建分支
 
 git checkout hot_fix 切换分支
 
+合并分支：
+
+1.  切换到受修改的分支（被合并）
+2. 执行merge命令
+
 
 
