@@ -186,8 +186,146 @@ git checkout hot_fix 切换分支
 
 合并分支：
 
-1.  切换到受修改的分支（被合并）
-2. 执行merge命令
+1. 切换到受修改的分支（被合并）
+
+2. 执行merge命令 
+
+   git merge [分支名]    已修改的分支
+
+## P26 解决冲突
+
+
+
+![Snipaste_2022-01-10_06-43-30](E:\github\gitLearn\Image\Snipaste_2022-01-10_06-43-30.png)
+
+all conficts fixed but you are still merging.   冲突已解决，但是仍处于合并中。
+
+## P27 hash
+
+1. 加密后长度固定。MD5 16位十六进制数
+2. 输入确定， 算法确定， 结果确定
+3. 校验文件。 
+4. 服务器计算文件： sha-1   下载文件计算文件： sha-1   进行对比。
+
+## P28 数据管理机制
+
+提交后： 有历史记录。 版本保存修改。 svn ： 保存有变化的数据。 
+
+git : 快照流。 指针。 
+
+提交对象： hash值。 提交时间， 提交者。
+
+## P29 分支管理的本质
+
+移动指针。 
+
+![Snipaste_2022-01-10_07-02-38](E:\github\gitLearn\Image\Snipaste_2022-01-10_07-02-38.png)
+
+## P30 github账号： 
+
+## P31 修改头像
+
+点击头像， you profile  
+
+## P32 本地库和远程库交互
+
+创建本地库。 
+
+## P34创建远程库
+
+创建远程库。 
+
+不创建redmie文件。 
+
+## P35  远程库地址
+
+git remote add origin https://github.com/LinuxZhaoLi/gitLearn.git
+
+origin  地址别名
+
+## P36 推送操作
+
+ git push origin master
+
+## P37 克隆
+
+git clone   
+
+1. 把远程库下载
+2. 创建地址别名
+3. 初始化本地库
+
+## P38 加入团队
+
+error 403 没有权限。**合作者** 
+
+setting --> collaborators  --> add collaborator. 
+
+## P39 远程库修改的拉去
+
+git fetch origin master  抓取远程库。
+
+抓取下来不会修改本地文件。 
+
+查看下载内容： 
+
+checkout origin/master
+
+合并：
+
+git merge / origin/master 
+
+
+
+## P40 协同开发冲突
+
+不是在最新版本上修改的 
+
+## P41 跨团队协同操作演示
+
+fork  + pull request 
+
+现在 fork的都是别人的。 
+
+本地修改，上传远程库。 
+
+create pull request 
+
+Confirm merge  确认合并。
+
+## P40 ssh 免密
+
+ssh-keygen -t rsa -C zhaoshengli@qq.com 
+
+cat id_rsa.puk 复制到github  个人设置： ssh and GPG keys.
+
+新建远程库别名： git remote add origin_ssh ssh地址。
+
+## P47 特定文件
+
+.project 文件  和开发文件无关。需要忽略。
+
+## P48 忽略文件
+
+https://github.com/github/gitignore
+
+在 C: / 用户/lenovo/   下载添加 Java.gitignor 文件。
+
+修改： gitconfig 文件
+
+添加：
+
+[core]
+
+​	excludesfile = c:\user\Lenovo\Java.gitignore 
+
+
+
+
+
+
+
+
 
 
 
